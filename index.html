@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js">
+</script>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Holo-Dex: Teaching Dexterity with Immersive Mixed Reality">
+  <meta property="og:description" content="Holo-Dex: Teaching Dexterity with Immersive Mixed Reality">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Holo-Dex: Teaching Dexterity with Immersive Mixed Reality">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Holo-Dex: Teaching Dexterity with Immersive Mixed Reality">
+  <meta name="twitter:description"
+    content="We propose a new Mixed Reality based framework to collect and deploy imitation learning algorithms for dexterous manipulation.">
+  <link rel="stylesheet" href="css/simple-grid.css">
+  <link rel="shortcut icon" href="mfiles/robotic-arm.png">
+
+  <title>T-Dex: Dexterity from Touch</title>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <div class="container">
+
+      <div class="row"> <!-- - TODO --> 
+        <div class="col-12 center">
+          <h1>Dexterity from Touch: Self-Supervised Pre-Training of Tactile Representations with Robotic Play</h1>
+        </div>
+        <div class="col-3 hidden-sm"></div>
+        <div class="col-2 center">
+          <a style="text-decoration: none" href="https://arxiv.org/abs/2210.06463" download>
+            <h3 style="color: #F5A803">Paper - TODO</h3>
+          </a>
+        </div>
+        <div class="col-2 center">
+          <a style="text-decoration: none" href="https://drive.google.com/drive/folders/1PiuqYkG7O1sIxE7YewVkni6ohLuNY7vF?usp=sharing" download>
+            <h3 style="color: #F5A803">Data - TODO</h3>
+          </a>
+        </div>
+        <div class="col-2 center">
+          <a style="text-decoration: none" href="https://github.com/SridharPandian/Holo-Dex" download>
+            <h3 style="color: #F5A803">Code - TODO</h3>
+          </a>
+        </div>
+      </div>
+
+      <!-- Author names -->
+      <div class="row">
+        <!-- <div class="col-12 center"> -->
+          <!-- <h3> Author Names Omitted for Anonymous Review. Paper-ID [41] </p> -->
+          <!-- <a style="text-decoration: none" href="https://sridharpandian.github.io" download>
+            <h3>Sridhar Pandian</h3>
+            <p>New York University</p>
+          </a> -->
+        <!-- </div> -->
+        <div class="col-0 hidden-sm"></div>
+        <div class="col-3 center">
+          <a style="text-decoration: none" href="https://irmakguzey.github.io" download>
+            <h3>Irmak Guzey</h3>
+            <p>New York University</p>
+          </a>
+        </div>
+        <div class="col-3 center">
+          <a style="text-decoration: none" href="https://bennevans.github.io/" download>
+            <h3>Ben Evans</h3>
+            <p>New York University</p>
+          </a>
+        </div>
+        <div class="col-3 center">
+          <a style="text-decoration: none"  href="https://soumith.ch/" download>
+            <h3>Soumith Chintala</h3>
+            <p>Meta AI</p>
+          </a>
+        </div>
+        <div class="col-3 center">
+          <a style="text-decoration: none" href="https://lerrelpinto.com/" download>
+            <h3>Lerrel Pinto</h3>
+            <p>New York University</p>
+          </a>
+        </div>
+
+      </div>
+      
+      <!--Intro video-->
+      <div class="intro-vid">
+        <div class="container">
+          <div class="col-12">
+            <body>
+              <!-- <iframe width="711" height="400" src="https://youtu.be/JeI3WU37Ifk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+              <iframe width="711" height="400" src="https://www.youtube.com/embed/JeI3WU37Ifk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <!-- <iframe width="711" height="400" src="https://www.youtube.com/embed/Iz797Mv2J84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            </body>
+          </div>
+        </div>
+      </div>
+
+      <!--Abstract-->
+      <div class="row">
+        <div class="col-12">
+          <h2 class="center m-bottom">Abstract</h2>
+          <p>
+            Teaching dexterity to multi-fingered robots has been
+            a longstanding challenge in robotics. Most prominent work in
+            this area focuses on learning controllers or policies that either
+            operate on visual observations or state estimates derived from
+            vision. However, such methods perform poorly on fine-grained
+            manipulation tasks that require reasoning about contact forces or
+            about objects occluded by the hand itself. In this work, we present
+            T-DEX, a new approach for tactile-based dexterity, that operates
+            in two phases. In the first phase, we collect 2.5 hours of play
+            data, which is used to train self-supervised tactile encoders. This
+            is necessary to bring high-dimensional tactile readings to a lower-
+            dimensional embedding. In the second phase, given a handful of
+            demonstrations for a dexterous task, we learn non-parametric
+            policies that combine the tactile observations with visual ones.
+            Across five challenging dexterous tasks, we show that our tactile-
+            based dexterity models outperform purely vision and torque-
+            based models by an average of 1.7X. Finally, we provide a detailed
+            analysis on factors critical to T-DEX including the importance
+            of play data, architectures, and representation learning. 
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!--Method-->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="center m-bottom">Method</h2>
+        </div>
+        <div class="col-6">
+          <p><a style="color: #00A2FF; font-weight: bold;">T-Dex</a> consists of three phases: collecting a tactile play data, where a teleoperator collects 2.5 hours of demonstrations of
+            aimless tasks such as steering a wheel, moving a joystick or in-hand manipulation, training a tactile encoder on tactile readings of this play data and demonstration-based policy learning
+            using visual and tactile observations.
+          </p>
+        </div>
+
+        <div class="col-6">
+          <img src="./mfiles/tdex_intro.png"/>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <p>
+          We treat each tactile reading as if they are RGB images, where each channel corresponds to
+          different force axes. Train an encoder using self-supervised learning algorithms. And use nearest neighbor matching to retrieve the action.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="center img">
+        <img src="./mfiles/tdex_algo.png" style="max-width:1000px;width:60%" frameborder="0"
+        allowfullscreen></img>
+      </div>
+    </div>
+      
+    <!-- Play Data Collection Heading -->
+    <div class="container">
+        <div class="row">
+          <div class="col-12">
+              <h2 class="center m-bottom">Play Data Collection</h2> 
+          </div>
+
+          <div class="col-6">
+              <p> 
+                  Since it is hard to collect fine-grained dexterous demonstrations through teleoperation without the tactile feeling we train a tactile encoder
+                  through large amounts of play data. A teleoperator collects 2.5 hours of play demonstrations by using an Oculus headset and a buil-in Kinova joystick, 
+                  shown in this figure.
+              </p>
+              <!-- <img src="./mfiles/nns/planar-rotation-train-nn.gif"/> -->
+          </div>
+          <div class="col-6">
+              <img src="./mfiles/robot_setup.png"/>
+          </div>
+
+          <div class="col-12">
+            <h3 class="center m-bottom">Example Play Data</h2> 
+          </div>
+          <div class="col-6">
+            <img src="./mfiles/play_data.gif"/>
+            <p class="center">
+              Example play data tasks done</p>
+          </div>
+          <div class="col-6">
+            <img src="./mfiles/play_data_tactile.gif"/>
+            <p class="center">
+              Example play data tactile readings from top four activated tactile pads.
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <!-- <br><br> -->
+
+    <!-- Policies -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="center m-bottom">Policies</h2>
+          <p>
+            We use non-parametric imitation learning (Nearest Neighbors) to optimize our robot policies.
+            At each timestep, the closest example to the current observation is searched in the demonstration dataset.
+            Representations for the demonstration buffer and the current state are received from the image encoder
+              and the tactile encoder separately. And then concated with each other.
+            The action associated with that closest example is then executed on the robot.
+          </p>
+        </div>
+
+        <!-- TODO: NN videos here? -->
+
+        <div class="col-12">
+          <h2 class="center m-bottom">Our learned policies on 5 different tasks</h2>
+        </div>
+        
+        <br><br><br>
+
+        <div class="col-4">
+            <img src="./mfiles/main_task/gamepad.gif"/>
+            <h3 class="center">Joystick Movement</h3>
+        </div>
+        <div class="col-4">
+            <img src="./mfiles/main_task/bottle_opening.gif"/>
+            <h3 class="center">Bottle Cap Opening</h3>
+        </div>
+        <div class="col-4">
+            <img src="./mfiles/main_task/book_opening.gif"/>
+            <h3 class="center">Book Opening</h3>
+        </div>
+
+        <div class="col-4">
+            <img src="./mfiles/main_task/bowl_picking.gif"/>
+            <h3 class="center">Bowl Unstacking</h3>
+        </div>
+        <div class="col-4">
+            <img src="./mfiles/main_task/cup_picking.gif"/>
+            <h3 class="center">Cup Unstacking</h3>
+        </div>
+        <!-- <div class="col-4">
+            <img src="./mfiles/main_task/postit-note-sliding.gif"/>
+            <h3 class="center">Postit Note Sliding</h3>
+        </div> -->
+      </div>
+    </div>
+
+    <br><br>
+
+    <!-- Generalization Experiments -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="center m-bottom">Generalization Experiments</h2>
+          <p>
+            We observed that policies learned was able to generalize on structurally similar but visually different objects 
+            in few of the tasks.
+            <!-- We observed that imitation learning model was able to generalize on structurally and visually different 
+            objects in all the in-hand manipulation tasks. -->
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <h3 class="center">Generalization observed with unseen objects in Cup Unstacking task</h3>
+        <div class="c">
+          <input type="radio" name="cup_picking_gen" id="cup-1" checked>
+          <label for="cup-1" style="--hue: 82"></label>
+          <div class="ci" style="--z: 6">
+            <img src="./mfiles/generalization/cup_picking/cup_picking_tdex_gen_2.gif" alt="Trees">
+          </div>
+          
+          <input type="radio" name="cup_picking_gen" id="cup-2">
+          <label for="cup-2" style="--hue: 40"></label>
+          <div class="ci" style="--z: 5">
+            <img src="./mfiles/generalization/cup_picking/cup_picking_tdex_gen_3.gif" alt="Mountains and houses">
+          </div>
+          
+          <input type="radio" name="cup_picking_gen" id="cup-3">
+          <label for="cup-3" style="--hue: 210"></label>
+          <div class="ci" style="--z: 4">
+            <img src="./mfiles/generalization/cup_picking/cup_picking_tdex_gen_1.gif" alt="Sky and mountains">
+          </div>
+
+          <input type="radio" name="cup_picking_gen" id="cup-4">
+          <label for="cup-4" style="--hue: 210"></label>
+          <div class="ci" style="--z: 3">
+            <img src="./mfiles/generalization/cup_picking/cup_picking_tdex_gen_4.gif" alt="Sky and mountains">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <h3 class="center">Generalization observed with unseen objects in Bowl Unstacking task</h3>
+        <div class="c">
+          <input type="radio" name="bowl_picking_gen" id="bowl-1" checked>
+          <label for="bowl-1" style="--hue: 82"></label>
+          <div class="ci" style="--z: 6">
+            <img src="./mfiles/generalization/bowl_picking/bowl_picking_tdex_gen_2.gif" alt="Trees">
+          </div>
+          
+          <input type="radio" name="bowl_picking_gen" id="bowl-2">
+          <label for="bowl-2" style="--hue: 40"></label>
+          <div class="ci" style="--z: 5">
+            <img src="./mfiles/generalization/bowl_picking/bowl_picking_tdex_gen_3.gif" alt="Mountains and houses">
+          </div>
+          
+          <input type="radio" name="bowl_picking_gen" id="bowl-3">
+          <label for="bowl-3" style="--hue: 210"></label>
+          <div class="ci" style="--z: 4">
+            <img src="./mfiles/generalization/bowl_picking/bowl_picking_tdex_gen_4.gif" alt="Sky and mountains">
+          </div>
+
+          <input type="radio" name="bowl_picking_gen" id="bowl-4">
+          <label for="bowl-4" style="--hue: 210"></label>
+          <div class="ci" style="--z: 3">
+            <img src="./mfiles/generalization/bowl_picking/bowl_picking_tdex_gen_1.gif" alt="Sky and mountains">
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+    <br><br>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="center m-bottom">Baseline comparisons</h2>
+          <p>
+            We observe that we require both the tactile and image observations combined together to successfully complete our tasks.
+            We show the importance of our method decisions by comparing image only and tactile only neighbor matching
+            policies to T-Dex.
+          </p>
+
+          <div class="col-6">
+            <img src="./mfiles/baseline_comp/tdex_cup.gif"/>
+            <h3 class="center">T-Dex</h3>
+            <p class="center">
+              <b>Success:</b> It successfully slides the inner cup.
+            </p>
+          </div>
+          <div class="col-6">
+            <img src="./mfiles/baseline_comp/image_only_cup.gif"/>
+            <h3 class="center">Image Only NN Matching Policy</h3>
+            <p class="center">
+              <b>Failure:</b> It fails since the policy doesn't know how much force should be applied.
+            </p>
+          </div>
+          <div class="col-6">
+            <img src="./mfiles/baseline_comp/tactile_only_cup.gif"/>
+            <h3 class="center">Tactile Only NN Matching Policy</h3>
+            <p class="center">
+              <b>Failure:</b> It fails since the policy doesn't know where the object is.
+            </p>
+          </div>
+
+          <!-- <p>
+            We observed that policies learned was able to generalize on structurally similar but visually different objects 
+            in few of the tasks.
+          </p> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <footer>
+  </footer>
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      setInterval(planar_rotation_cycle, 10000);
+      setInterval(object_flipping_cycle, 10000);
+      setInterval(can_spinning_cycle, 10000);
+      setInterval(failure_cycle, 10000);
+
+      var planar_rotation_marker = 1;
+      var object_flipping_marker = 1;
+      var can_spinning_marker = 1;
+      var failure_marker = 1;
+
+      function planar_rotation_cycle() {
+        planar_rotation_marker = (planar_rotation_marker % 6) + 1;
+        $('#cr-' + planar_rotation_marker).prop('checked', true);
+      }
+
+      function object_flipping_cycle() {
+        object_flipping_marker = (object_flipping_marker % 9) + 1;
+        $('#dr-' + object_flipping_marker).prop('checked', true);
+      }
+
+      function can_spinning_cycle() {
+        can_spinning_marker = (can_spinning_marker % 9) + 1;
+        $('#er-' + can_spinning_marker).prop('checked', true);
+      }
+
+      function failure_cycle() {
+        failure_marker = (failure_marker % 4) + 1;
+        $('#fr-' + failure_marker).prop('checked', true);
+      }
+    }); -->
+  <!-- </script> -->
+
+</body>
+
+</html>
